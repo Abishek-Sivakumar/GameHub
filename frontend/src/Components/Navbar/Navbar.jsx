@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navbar.css";
-import gamelogo from "../../assets/gameicon3.jpg";
+import gamelogo from "../../assets/gameicon2.png";
 import toggle_light from "../../assets/night.png";
 import toggle_dark from "../../assets/day.png";
 import search_icon_light from "../../assets/search-w.png";
