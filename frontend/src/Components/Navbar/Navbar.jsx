@@ -5,6 +5,7 @@ import toggle_light from "../../assets/night.png";
 import toggle_dark from "../../assets/day.png";
 import search_icon_light from "../../assets/search-w.png";
 import search_icon_dark from "../../assets/search-b.png";
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
   const toggle_mode = () => {
@@ -18,9 +19,30 @@ function Navbar(props) {
         <p>GameHub</p>
       </div>
       <ul>
-        <li>Home</li>
-        <li>Games</li>
-        <li>About</li>
+        <li>
+          <Link className="react-link" to="/home">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link className="react-link" to="/">
+            Games
+          </Link>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/abishek-sivakumar-a16a18263/"
+            className="react-link"
+            target="_blank"
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <Link className="react-link" to="/addgame">
+            Add Game
+          </Link>
+        </li>
       </ul>
       <div className="search-box">
         <input type="text" placeholder="Search Games" />
