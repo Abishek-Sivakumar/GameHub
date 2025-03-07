@@ -81,7 +81,7 @@ function AddGame() {
             <option value="Adventure">Adventure</option>
             <option value="RPG">RPG</option>
             <option value="Souls-Like">Souls-Like</option>
-            <option value="Sports">Adventure</option>
+            <option value="Sports">Sports</option>
             <option value="Racing">Racing</option>
             <option value="Strategy">Strategy</option>
           </select>
