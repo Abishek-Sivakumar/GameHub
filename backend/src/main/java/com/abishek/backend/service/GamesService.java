@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class GamesService {
@@ -22,6 +23,10 @@ public class GamesService {
 
     public Games getGameById(Long id) {
         return repo.findById(id).orElseThrow(()->new GameNotFoundException(id));
+    }
+
+    public Optional<Games> getGameByIdOptional(Long id) {
+        return repo.findById(id);
     }
 
     public Games addGames(Games games, MultipartFile imageFile) throws IOException {
