@@ -5,6 +5,12 @@
   gap: 10px;
   margin: 10px;
   border: 2px solid orange;
+  justify-content: center;
+}
+
+.home-container > div {
+  max-width: 450px;
+  flex: 1;
 }
 
 .card {
