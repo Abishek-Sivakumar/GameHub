@@ -15,6 +15,11 @@ function Home() {
     setGames(result.data);
   };
 
+  const deleteGame = async (id) => {
+    await axios.delete(`http://localhost:8080/games/${id}`);
+    loadGames();
+  };
+
   const gamesEl = games.map((game) => {
     return (
       <div className="card" key={game.id}>
@@ -48,7 +53,12 @@ function Home() {
         <p className="card-des-category">{game.category}</p>
         <div className="card-button-div">
           <button className="card-button update">Update Review</button>
-          <button className="card-button delete">Delete Review</button>
+          <button
+            className="card-button delete"
+            onClick={() => deleteGame(game.id)}
+          >
+            Delete Review
+          </button>
         </div>
       </div>
     );

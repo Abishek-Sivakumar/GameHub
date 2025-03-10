@@ -52,8 +52,12 @@ public class GamesController {
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
     }
 
+    @CrossOrigin(origins = "http://localhost:5173")
+    @DeleteMapping("/games/{id}")
+    public void deleteGameById(@PathVariable Long id){
+        service.deleteGameById(id);
+    }
 
 }

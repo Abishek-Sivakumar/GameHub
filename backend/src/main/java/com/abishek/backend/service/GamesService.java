@@ -35,4 +35,12 @@ public class GamesService {
         games.setImageData(imageFile.getBytes());
         return repo.save(games);
     }
+
+    public void deleteGameById(long gameid){
+        if(!repo.existsById(gameid)){
+            throw new GameNotFoundException(gameid);
+        }else{
+            repo.deleteById(gameid);
+        }
+    }
 }
