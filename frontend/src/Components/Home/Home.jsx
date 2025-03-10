@@ -52,7 +52,7 @@ function Home() {
         <p className="card-des-rating">Rated {game.rating}/10</p>
         <p className="card-des-category">{game.category}</p>
         <div className="card-button-div">
-          <button className="card-button update">Update Review</button>
+          <button className="card-button update">Edit Review</button>
           <button
             className="card-button delete"
             onClick={() => deleteGame(game.id)}

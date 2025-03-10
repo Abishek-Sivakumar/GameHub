@@ -156,6 +156,10 @@
   margin-right: 0.2rem;
 }
 
+.card-button:hover {
+  cursor: pointer;
+}
+
 .update {
   background-color: #1e90ff;
   box-shadow: 0px 5px 0px 0px #82caff;

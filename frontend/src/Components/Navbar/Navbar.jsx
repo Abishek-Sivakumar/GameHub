@@ -63,7 +63,7 @@ function Navbar(props) {
             to="/addgame"
             onClick={() => setMenuOpen(false)}
           >
-            Add Game
+            Add Review
           </Link>
         </li>
       </ul>
