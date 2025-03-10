@@ -31,6 +31,7 @@
     rgb(31, 31, 31) 100%
   );
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.55);
+  color: aliceblue;
 }
 
 .card {
@@ -39,7 +40,7 @@
   width: 20rem;
   height: 30rem;
   max-height: 330px;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   border-radius: 10px;
   box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
     -4px -4px 12px rgba(0, 0, 0, 0.08);
@@ -94,7 +95,7 @@
   font-weight: 600;
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  color: #1797b8;
+  color: #000080;
   cursor: default;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -103,7 +104,12 @@
   line-clamp: 1;
 }
 
-.card-des {
+.dark .card-title {
+  color: #fff;
+}
+
+.card-des-rating,
+.card-des-category {
   -webkit-box-orient: vertical;
   overflow: hidden;
   display: -webkit-box;
@@ -113,6 +119,59 @@
   font-size: 13px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  color: #1797b8;
   cursor: default;
+}
+
+.card-des-rating {
+  color: #daa520;
+}
+
+.card-des-category {
+  color: #663399;
+}
+
+.dark .card-des-rating {
+  color: yellow;
+}
+
+.dark .card-des-category {
+  color: orangered;
+}
+
+.card-button-div {
+  display: flex;
+  justify-content: center;
+}
+
+.card-button {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  margin-top: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.update {
+  background-color: #1e90ff;
+  box-shadow: 0px 5px 0px 0px #82caff;
+}
+
+.update:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #82caff;
+}
+
+.delete {
+  background-color: #b80f0a;
+  box-shadow: 0px 5px 0px 0px #fa8072;
+}
+
+.delete:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #fa8072;
 }

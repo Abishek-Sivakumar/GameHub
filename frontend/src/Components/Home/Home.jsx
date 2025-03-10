@@ -44,8 +44,12 @@ function Home() {
           </div>
         </div>
         <p className="card-title">{game.name}</p>
-        <p className="card-des">Rated {game.rating}/10</p>
-        <p className="card-des">{game.category}</p>
+        <p className="card-des-rating">Rated {game.rating}/10</p>
+        <p className="card-des-category">{game.category}</p>
+        <div className="card-button-div">
+          <button className="card-button update">Update Review</button>
+          <button className="card-button delete">Delete Review</button>
+        </div>
       </div>
     );
   });

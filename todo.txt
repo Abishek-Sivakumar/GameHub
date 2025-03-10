@@ -5,5 +5,6 @@ Update button in React using another page
 Mobile Responsive
 View each game 
 Filter game based on search
+Manifest file ico 
 
 
