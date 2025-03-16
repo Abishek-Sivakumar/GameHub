@@ -44,6 +44,21 @@ ul li {
   margin: 0;
 }
 
+.nav-links {
+  display: flex;
+  margin-left: 13rem;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}
+
 .react-link::after {
   content: "";
   position: absolute;
@@ -59,6 +74,10 @@ ul li {
 .react-link:hover::after {
   transform: scaleX(1);
   /* transform-origin: bottom left; start from left*/
+}
+
+.search-toggle {
+  display: flex;
 }
 
 .search-box {
@@ -90,7 +109,7 @@ ul li {
 
 .toggle-icon {
   width: 50px;
-  margin-left: 40px;
+  margin-left: 0.22rem;
   cursor: pointer;
 }
 

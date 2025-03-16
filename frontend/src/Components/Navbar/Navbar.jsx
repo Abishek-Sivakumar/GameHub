@@ -22,9 +22,9 @@ function Navbar(props) {
       </div>
 
       {/* Hamburger Menu */}
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+      {/* <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
-      </div>
+      </div> */}
 
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
@@ -69,22 +69,24 @@ function Navbar(props) {
       </ul>
 
       {/* Search Box (Hidden on mobile) */}
-      <div className="search-box">
-        <input type="text" placeholder="Search Games" />
+      <div className="search-toggle">
+        <div className="search-box">
+          <input type="text" placeholder="Search Games" />
+          <img
+            src={props.theme === "light" ? search_icon_light : search_icon_dark}
+            alt="Search Icon"
+            className="search"
+          />
+        </div>
+
+        {/* Theme Toggle */}
         <img
-          src={props.theme === "light" ? search_icon_light : search_icon_dark}
-          alt="Search Icon"
-          className="search"
+          src={props.theme === "light" ? toggle_light : toggle_dark}
+          alt="Toggle Mode Icon"
+          className="toggle-icon"
+          onClick={toggle_mode}
         />
       </div>
-
-      {/* Theme Toggle */}
-      <img
-        src={props.theme === "light" ? toggle_light : toggle_dark}
-        alt="Toggle Mode Icon"
-        className="toggle-icon"
-        onClick={toggle_mode}
-      />
     </div>
   );
 }
